@@ -60,7 +60,9 @@ function check(){
         document.getElementById("nymode").checked = true
         theme()
     }
-
+    if(localStorage.getItem("def")!==null&&localStorage.getItem("def")!==""){
+        document.getElementById("source").value = localStorage.getItem("def")
+    }
 }
 
 function save(){
