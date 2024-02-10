@@ -56,15 +56,17 @@ function theme(){
 }
 
 function check(){
+    if(localStorage.getItem("def")!==null&&localStorage.getItem("def")!==""){
+        document.getElementById("source").value = localStorage.getItem("def")
+    }
+    
     if(localStorage.getItem("theme")=="true"){
         document.getElementById("nymode").checked = true
         theme()
-    }
-    if(localStorage.getItem("def")!==null&&localStorage.getItem("def")!==""){
-        document.getElementById("source").value = localStorage.getItem("def")
     }
 }
 
 function save(){
     localStorage.setItem("def",document.getElementById("source").value)
+    alert("saved")
 }
